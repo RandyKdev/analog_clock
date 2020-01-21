@@ -6,8 +6,12 @@ class PaintUI extends CustomPainter {
   String type, subType;
   double screenWidth, screenHeight;
   int index;
-  PaintUI(double screenWidth, double screenHeight, String type,
-      {int index, String subType}) {
+  PaintUI(
+      {@required double screenWidth,
+      @required double screenHeight,
+      @required String type,
+      int index,
+      String subType}) {
     this.screenHeight = screenHeight;
     this.screenWidth = screenWidth;
     this.index = index;
@@ -79,12 +83,12 @@ class PaintUI extends CustomPainter {
         canvas.drawPath(_path1, _paint1);
         break;
       case 'MinuteHand':
-      // print(screenWidth);
+        // print(screenWidth);
         Path _path = Path();
         _path.moveTo(screenWidth / 2, screenHeight / 6);
         _path.lineTo((screenWidth * 309 / 600), (screenHeight / 2));
         _path.lineTo((screenWidth / 2), (screenHeight * 17 / 30));
-        _path.lineTo((screenWidth * 59 / 120 ) - 4, (screenHeight / 2));
+        _path.lineTo((screenWidth * 59 / 120) - 4, (screenHeight / 2));
         _path.lineTo(screenWidth / 2, screenHeight / 6);
         canvas.drawPath(_path, _paint);
 
@@ -92,28 +96,24 @@ class PaintUI extends CustomPainter {
         _path1.moveTo(screenWidth / 2, screenHeight / 6);
         _path1.lineTo((screenWidth * 309 / 600), (screenHeight / 2));
         _path1.lineTo((screenWidth / 2), (screenHeight * 17 / 30));
-        _path1.lineTo((screenWidth * 59 / 120 ) - 4, (screenHeight / 2));
+        _path1.lineTo((screenWidth * 59 / 120) - 4, (screenHeight / 2));
         _path1.lineTo(screenWidth / 2, screenHeight / 6);
         canvas.drawPath(_path1, _paint1);
         break;
       case 'HourHand':
         Path _path = Path();
         _path.moveTo((screenWidth / 2), (screenHeight / 4));
-        _path.lineTo(
-            (screenWidth * 309 / 600), (screenHeight / 2));
+        _path.lineTo((screenWidth * 309 / 600), (screenHeight / 2));
         _path.lineTo((screenWidth / 2), (screenHeight * 17 / 30));
-        _path.lineTo(
-            (screenWidth * 59 / 120 ) - 4, (screenHeight / 2));
+        _path.lineTo((screenWidth * 59 / 120) - 4, (screenHeight / 2));
         _path.lineTo(screenWidth / 2, screenHeight / 4);
         canvas.drawPath(_path, _paint);
 
         Path _path1 = Path();
         _path1.moveTo((screenWidth / 2), (screenHeight / 4));
-        _path1.lineTo(
-            (screenWidth * 309 / 600), (screenHeight / 2));
+        _path1.lineTo((screenWidth * 309 / 600), (screenHeight / 2));
         _path1.lineTo((screenWidth / 2), (screenHeight * 17 / 30));
-        _path1.lineTo(
-            (screenWidth * 59 / 120 ) - 4, (screenHeight / 2));
+        _path1.lineTo((screenWidth * 59 / 120) - 4, (screenHeight / 2));
         _path1.lineTo(screenWidth / 2, screenHeight / 4);
         canvas.drawPath(_path1, _paint1);
         break;
