@@ -67,7 +67,7 @@ class _HandsState extends State<Hands> with TickerProviderStateMixin {
           controller.reset();
 
           if (widget.type == 'SecondHand') {
-            controller.duration = Duration(milliseconds: 1000);
+            controller.duration = Duration(milliseconds: 999);
           } else if (widget.type == 'MinuteHand') {
             controller.duration = Duration(minutes: 60);
           } else if (widget.type == 'HourHand') {
